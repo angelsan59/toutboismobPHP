@@ -1,4 +1,5 @@
 <?php
+session_start(); // On démarre la session AVANT toute chose
 require_once("conn.php");
 $idCommande=$_GET['idCommande'];
 $ps=$pdo->prepare("SELECT * FROM ligne_commande JOIN produit ON ligne_commande.code_prod=produit.code_prod WHERE id_com=?");

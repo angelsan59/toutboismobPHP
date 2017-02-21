@@ -1,4 +1,5 @@
 <?php
+session_start(); // On démarre la session AVANT toute chose
 require_once("./conn.php");
 $ps=$pdo->prepare("SELECT * FROM commande ORDER BY id_com DESC");
 $ps->execute();
